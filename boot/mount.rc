@@ -1,0 +1,107 @@
+ mount ext4 /dev/block/mmcblk0p9 /system
+
+/system/bin/
+  app_process32
+  app_process64
+  sh
+  toybox
+  toolbox
+  logd
+  vold
+  netd
+  surfaceflinger
+  mediaserver
+
+/system/lib/
+  libc.so
+  libm.so
+  libdl.so
+  libandroid_runtime.so
+  libart.so
+  libcamera_client.so
+  libgui.so
+  libbinder.so
+  libhardware.so
+
+/system/app/
+  Calculator/Calculator.apk
+  Contacts/Contacts.apk
+  Browser/Browser.apk
+  Settings/Settings.apk
+  Camera/Camera.apk
+  DeskClock/DeskClock.apk
+  Email/Email.apk
+  Music/Music.apk
+
+/system/framework/
+  framework-res.apk
+  android.policy.jar
+  services.jar
+  core-libart.jar
+  ext.jar
+
+/system/etc/
+  build.prop
+  default.prop
+  init.rc
+  vold.fstab
+  selinux/
+    file_contexts
+    seapp_contexts
+    policy.conf
+mount ext4 /dev/block/mmcblk0p10 /vendor
+
+/vendor/bin/
+  hw/android.hardware.audio@2.0-service
+  hw/android.hardware.camera@1.0-service
+  hw/android.hardware.gnss@1.0-service
+  drmserver
+  keystore
+  gatekeeperd
+
+/vendor/lib/
+  libaudio.so
+  libcamera.so
+  libgps.so
+  libdrm.so
+  libkeystore.so
+  libgatekeeper.so
+
+/vendor/etc/
+  init.hardware.rc
+  audio_policy.conf
+  drm/ 
+    widevine.cert
+    clearkey.key
+  permissions/
+    android.hardware.camera.xml
+    android.hardware.location.gnss.xml
+    android.hardware.audio.xml
+
+/vendor/firmware/
+  qcom/
+    wlan_firmware.bin
+    camera_firmware.mdt
+mount ext4 /dev/block/mmcblk0p11 /product
+
+/product/app/
+  Chrome/Chrome.apk
+  YouTube/YouTube.apk
+  GmsCore/GmsCore.apk
+  Gmail/Gmail.apk
+  Maps/Maps.apk
+
+/product/etc/
+  product_config.xml
+  permissions/
+    com.google.android.camera2.xml
+    com.google.android.media.xml
+
+/product/framework/
+  framework-res.apk
+  framework.jar
+  services.jar
+
+/product/lib/
+  libproduct.so
+  libmedia.so
